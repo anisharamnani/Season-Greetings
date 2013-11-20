@@ -49,6 +49,20 @@ end
 # Christmas: Lights and Wreath
 # New Years: Party Hats
 
+holiday_supplies.each do |season, holiday_hash|
+	supply_list = []
+	puts "#{season.to_s.capitalize}:" 
+	holiday_hash.each do |holiday, supply_array|
+		supply_array.each do |supply|
+			supply_list << supply
+	end 
+	supply_list.compact!
+	str_supplies = supply_list.join(" and")
+	puts "  #{holiday.capitalize} : #{str_supplies}"
+		end
+	end
+end
+
 
 # Write a method to collect all holidays with BBQ.
 # holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]
